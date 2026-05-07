@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Gulyaturmix – Útvonalinfo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 560px;
+            margin: 48px auto;
+            padding: 0 20px;
+            color: #222;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 24px; }
+        label { display: block; margin-bottom: 16px; font-weight: bold; }
+        select {
+            display: block;
+            width: 100%;
+            font-size: 1rem;
+            padding: 6px 8px;
+            margin-top: 4px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 8px;
+            padding: 8px 24px;
+            font-size: 1rem;
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover { background: #1d4ed8; }
+        .result {
+            margin-top: 28px;
+            padding: 18px 20px;
+            background: #f0f6ff;
+            border-left: 4px solid #2563eb;
+            border-radius: 6px;
+        }
+        .result p { margin: 6px 0; font-size: 1.05rem; }
+        .error {
+            margin-top: 20px;
+            color: #b91c1c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gulyaturmix – Útvonalinfo</h1>
+    <form method="get">
+        <label>Itt vagyok:
+            <select name="a">
+                <option value="">-- válassz --</option>
+                {% for p in points %}
+                <option value="{{ p }}"{% if p == a %} selected{% endif %}>{{ p }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>Következő pontom:
+            <select name="b">
+                <option value="">-- válassz --</option>
+                {% for p in points %}
+                <option value="{{ p }}"{% if p == b %} selected{% endif %}>{{ p }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <button type="submit">Lássuk</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% elif info %}
+        <div class="result">
+            <p><strong>{{ a }} → {{ b }}:</strong> {{ info.a_to_b_km }} km</p>
+            <p><strong>{{ b }}-tól/től legtávolabb:</strong>
+                {{ info.b_farthest_name }} ({{ info.b_farthest_km }} km)
+            </p>
+            <p><strong>Összesen:</strong> {{ info.a_to_b_km + info.b_farthest_km }} km</p>
+            De biztos nem ez lesz :)
+        </div>
+    {% endif %}
+</body>
+</html>
