@@ -43,21 +43,22 @@ jobs:
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Install SDK components (IMPORTANT FIX)
+        run: |
+          sdkmanager --install \
+            "platform-tools" \
+            "platforms;android-33" \
+            "build-tools;34.0.0" \
+            "ndk;25.2.9519653"   
+
       - name: Accept SDK licenses
         run: yes | sdkmanager --licenses
 
-      - name: Install Android build tools
-        run: |
-          sdkmanager \
-            "platform-tools" \
-            "platforms;android-33" \
-            "build-tools;33.0.2"
-
-      - name: Set build environment variables
+      - name: Export Android paths
         run: |
           echo "ANDROIDSDK=$ANDROID_HOME" >> $GITHUB_ENV
-          echo "ANDROIDNDK=$ANDROID_HOME/ndk" >> $GITHUB_ENV
-          echo "PATH=$ANDROID_HOME/platform-tools:$PATH" >> $GITHUB_ENV
+          echo "ANDROIDNDK=$ANDROID_HOME/ndk/25.2.9519653" >> $GITHUB_ENV
+          echo "PATH=$ANDROID_HOME/build-tools/34.0.0:$PATH" >> $GITHUB_ENV
 
       - name: Build APK
         run: |
