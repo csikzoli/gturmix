@@ -32,11 +32,11 @@ def test_get_current_point_all_zero_returns_csemetekert():
     assert db.get_current_point() == "Csemetekert"
 
 
-def test_get_current_point_returns_max_from_point():
+def test_get_current_point_returns_max_to_point():
     insert("A", "B", seq=0)
     insert("Fenyősor", "C", seq=3)
     insert("Kisgulya", "D", seq=1)
-    assert db.get_current_point() == "Fenyősor"
+    assert db.get_current_point() == "C"
 
 
 def test_get_current_point_empty_db_returns_csemetekert():

@@ -120,7 +120,10 @@
             <p><strong>{{ b }}-tól/től legtávolabb:</strong>
                 {{ info.b_farthest_name }} ({{ info.b_farthest_km }} km)
             </p>
-            <p><strong>Összesen:</strong> {{ info.total_km }} km</p>
+            {% if info.b_avg_km is not none %}
+            <p><strong>Átlag innen:</strong> {{ info.b_avg_km }} km &nbsp;→&nbsp; {{ info.total_avg_km }} km</p>
+            {% endif %}
+            <p><strong>max:</strong> {{ info.total_km }} km</p>
         </div>
     {% endif %}
 

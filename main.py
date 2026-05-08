@@ -90,15 +90,22 @@ def route_info(a: str, b: str, results: dict) -> dict | None:
     if a_to_b is None or "error" in a_to_b:
         return None
     farthest = farthest_from(b, results)
+    candidates = [
+        e for e in results.values()
+        if e.get("from") == b and "error" not in e and e.get("status") == "L"
+    ]
+    b_avg_km = round(sum(e["distance_km"] for e in candidates) / len(candidates), 2) if candidates else None
+    dist = a_to_b["distance_km"]
     info = {
-        "a_to_b_km": round(a_to_b["distance_km"], 2),
+        "a_to_b_km": round(dist, 2),
         "b_farthest_name": farthest["to"] if farthest else None,
         "b_farthest_km": round(farthest["distance_km"], 2) if farthest else None,
-        "total_km": round(a_to_b["distance_km"] + farthest["distance_km"] if farthest else 0, 2)
+        "b_avg_km": b_avg_km,
+        "total_km": round(dist + farthest["distance_km"] if farthest else 0, 2),
     }
     print(f"{a} → {b}: {info['a_to_b_km']} km")
     if info["b_farthest_name"]:
-        print(f"{b} -tól/től legtávolabb: {info['b_farthest_name']} ({info['b_farthest_km']} km)")
+        print(f"{b} legtávolabb: {info['b_farthest_name']} ({info['b_farthest_km']} km), átlag: {b_avg_km} km")
     return info
 
 

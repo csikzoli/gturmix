@@ -145,6 +145,31 @@ def test_route_info():
     assert info["a_to_b_km"] == 3.0
     assert info["b_farthest_name"] == "C"
     assert info["b_farthest_km"] == 8.5
+    # átlag: (3.0 + 8.5 + 5.0) / 3 = 5.5
+    assert info["b_avg_km"] == pytest.approx(5.5, abs=0.01)
+    assert info["total_avg_km"] == pytest.approx(8.5, abs=0.01)
+    assert info["total_km"] == pytest.approx(11.5, abs=0.01)
+
+
+def test_route_info_avg_excludes_non_L():
+    results = {
+        "A_B": {"from": "A", "to": "B", "distance_km": 3.0, "status": "L"},
+        "B_C": {"from": "B", "to": "C", "distance_km": 8.0, "status": "L"},
+        "B_D": {"from": "B", "to": "D", "distance_km": 4.0, "status": "N"},
+    }
+    info = main.route_info("A", "B", results)
+    # csak B_C számít (status=L), B_D ki van zárva
+    assert info["b_avg_km"] == pytest.approx(8.0, abs=0.01)
+
+
+def test_route_info_avg_none_when_no_L_candidates():
+    results = {
+        "A_B": {"from": "A", "to": "B", "distance_km": 3.0, "status": "L"},
+        "B_C": {"from": "B", "to": "C", "distance_km": 8.0, "status": "N"},
+    }
+    info = main.route_info("A", "B", results)
+    assert info["b_avg_km"] is None
+    assert info["total_avg_km"] is None
 
 
 def test_route_info_missing_pair():

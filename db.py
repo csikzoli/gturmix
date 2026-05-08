@@ -46,7 +46,7 @@ def get_current_point() -> str:
     try:
         with get_connection() as conn:
             row = conn.execute(
-                "SELECT from_point, MAX(sequence_number) FROM routes"
+                "SELECT to_point, MAX(sequence_number) FROM routes"
             ).fetchone()
         if row and row[1]:
             return row[0]
