@@ -111,7 +111,20 @@ def _divider():
 class GulyaturmixApp(App):
     def build(self):
         Window.clearcolor = BG
-        self._init_data()
+        try:
+            self._init_data()
+        except Exception:
+            import traceback
+            scroll = ScrollView()
+            lbl = Label(
+                text=f"Indítási hiba:\n{traceback.format_exc()}",
+                color=(1, 0.3, 0.3, 1), halign="left", valign="top",
+                size_hint=(1, None),
+            )
+            lbl.bind(size=lambda *_: setattr(lbl, "text_size", lbl.size))
+            lbl.bind(texture_size=lambda *_: setattr(lbl, "height", lbl.texture_size[1]))
+            scroll.add_widget(lbl)
+            return scroll
 
         scroll = ScrollView()
         root = BoxLayout(orientation="vertical", padding=[14, 18, 14, 14],
