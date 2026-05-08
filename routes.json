@@ -1,4 +1,2248 @@
 {
+  "Margit utca_Kisgulya": {
+    "from": "Margit utca",
+    "to": "Kisgulya",
+    "distance_km": 3.583,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.845393657684326,
+          47.64045365870486
+        ],
+        "mappedPosition": [
+          18.845397,
+          47.6404523
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Kisgulya_Margit utca": {
+    "from": "Kisgulya",
+    "to": "Margit utca",
+    "distance_km": 3.583,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.845393657684326,
+          47.64045365870486
+        ],
+        "mappedPosition": [
+          18.845397,
+          47.6404523
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Száz éves fenyő": {
+    "from": "Margit utca",
+    "to": "Száz éves fenyő",
+    "distance_km": 4.129,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.84560286998749,
+          47.643271040313174
+        ],
+        "mappedPosition": [
+          18.8456126,
+          47.6432667
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Száz éves fenyő_Margit utca": {
+    "from": "Száz éves fenyő",
+    "to": "Margit utca",
+    "distance_km": 4.129,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.84560286998749,
+          47.643271040313174
+        ],
+        "mappedPosition": [
+          18.8456126,
+          47.6432667
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Pihenő": {
+    "from": "Margit utca",
+    "to": "Pihenő",
+    "distance_km": 4.814,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.840737342834476,
+          47.64581721536194
+        ],
+        "mappedPosition": [
+          18.8406898,
+          47.6457905
+        ],
+        "snapDistance": 4,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Pihenő_Margit utca": {
+    "from": "Pihenő",
+    "to": "Margit utca",
+    "distance_km": 4.814,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.840737342834476,
+          47.64581721536194
+        ],
+        "mappedPosition": [
+          18.8406898,
+          47.6457905
+        ],
+        "snapDistance": 4,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Deák Ferenc utca": {
+    "from": "Margit utca",
+    "to": "Deák Ferenc utca",
+    "distance_km": 3.818,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.842561244964603,
+          47.641364490161884
+        ],
+        "mappedPosition": [
+          18.8425494,
+          47.6413481
+        ],
+        "snapDistance": 2,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Deák Ferenc utca_Margit utca": {
+    "from": "Deák Ferenc utca",
+    "to": "Margit utca",
+    "distance_km": 3.818,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.842561244964603,
+          47.641364490161884
+        ],
+        "mappedPosition": [
+          18.8425494,
+          47.6413481
+        ],
+        "snapDistance": 2,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Jenga": {
+    "from": "Margit utca",
+    "to": "Jenga",
+    "distance_km": 5.34,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.835228085517887,
+          47.648614431387436
+        ],
+        "mappedPosition": [
+          18.835264,
+          47.6486349
+        ],
+        "snapDistance": 3,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Jenga_Margit utca": {
+    "from": "Jenga",
+    "to": "Margit utca",
+    "distance_km": 5.34,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.835228085517887,
+          47.648614431387436
+        ],
+        "mappedPosition": [
+          18.835264,
+          47.6486349
+        ],
+        "snapDistance": 3,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Csemetekert": {
+    "from": "Margit utca",
+    "to": "Csemetekert",
+    "distance_km": 3.796,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.850302100181583,
+          47.644830564670364
+        ],
+        "mappedPosition": [
+          18.8503018,
+          47.6448101
+        ],
+        "snapDistance": 2,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Csemetekert_Margit utca": {
+    "from": "Csemetekert",
+    "to": "Margit utca",
+    "distance_km": 3.796,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.850302100181583,
+          47.644830564670364
+        ],
+        "mappedPosition": [
+          18.8503018,
+          47.6448101
+        ],
+        "snapDistance": 2,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Szántói utca": {
+    "from": "Margit utca",
+    "to": "Szántói utca",
+    "distance_km": 2.959,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.853295445442203,
+          47.63867893751516
+        ],
+        "mappedPosition": [
+          18.8532932,
+          47.6386789
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Szántói utca_Margit utca": {
+    "from": "Szántói utca",
+    "to": "Margit utca",
+    "distance_km": 2.959,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.853295445442203,
+          47.63867893751516
+        ],
+        "mappedPosition": [
+          18.8532932,
+          47.6386789
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Homok nyereg": {
+    "from": "Margit utca",
+    "to": "Homok nyereg",
+    "distance_km": 3.103,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.858128786087036,
+          47.64169701197495
+        ],
+        "mappedPosition": [
+          18.8581261,
+          47.6416992
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Homok nyereg_Margit utca": {
+    "from": "Homok nyereg",
+    "to": "Margit utca",
+    "distance_km": 3.103,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.858128786087036,
+          47.64169701197495
+        ],
+        "mappedPosition": [
+          18.8581261,
+          47.6416992
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Fehér hegy": {
+    "from": "Margit utca",
+    "to": "Fehér hegy",
+    "distance_km": 2.465,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.864668011665344,
+          47.638469292334314
+        ],
+        "mappedPosition": [
+          18.8646659,
+          47.638467
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Fehér hegy_Margit utca": {
+    "from": "Fehér hegy",
+    "to": "Margit utca",
+    "distance_km": 2.465,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.864668011665344,
+          47.638469292334314
+        ],
+        "mappedPosition": [
+          18.8646659,
+          47.638467
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Gázvezeték": {
+    "from": "Margit utca",
+    "to": "Gázvezeték",
+    "distance_km": 1.619,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.86585891246796,
+          47.631574027316596
+        ],
+        "mappedPosition": [
+          18.8658696,
+          47.6315783
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Gázvezeték_Margit utca": {
+    "from": "Gázvezeték",
+    "to": "Margit utca",
+    "distance_km": 1.619,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.86585891246796,
+          47.631574027316596
+        ],
+        "mappedPosition": [
+          18.8658696,
+          47.6315783
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Sas szikla": {
+    "from": "Margit utca",
+    "to": "Sas szikla",
+    "distance_km": 1.469,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.87106239795685,
+          47.633856885529084
+        ],
+        "mappedPosition": [
+          18.8710709,
+          47.6338484
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Sas szikla_Margit utca": {
+    "from": "Sas szikla",
+    "to": "Margit utca",
+    "distance_km": 1.469,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.87106239795685,
+          47.633856885529084
+        ],
+        "mappedPosition": [
+          18.8710709,
+          47.6338484
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Fenyősor": {
+    "from": "Margit utca",
+    "to": "Fenyősor",
+    "distance_km": 4.333,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.83635997772217,
+          47.64331621838276
+        ],
+        "mappedPosition": [
+          18.83636,
+          47.6433152
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Fenyősor_Margit utca": {
+    "from": "Fenyősor",
+    "to": "Margit utca",
+    "distance_km": 4.333,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.83635997772217,
+          47.64331621838276
+        ],
+        "mappedPosition": [
+          18.83636,
+          47.6433152
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Csévi utca": {
+    "from": "Margit utca",
+    "to": "Csévi utca",
+    "distance_km": 5.31,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.82667183876038,
+          47.64627981439696
+        ],
+        "mappedPosition": [
+          18.8266761,
+          47.6462807
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Csévi utca_Margit utca": {
+    "from": "Csévi utca",
+    "to": "Margit utca",
+    "distance_km": 5.31,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.82667183876038,
+          47.64627981439696
+        ],
+        "mappedPosition": [
+          18.8266761,
+          47.6462807
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Megyehatár": {
+    "from": "Margit utca",
+    "to": "Megyehatár",
+    "distance_km": 5.89,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.829343318939213,
+          47.65354352757998
+        ],
+        "mappedPosition": [
+          18.8293351,
+          47.6535487
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Megyehatár_Margit utca": {
+    "from": "Megyehatár",
+    "to": "Margit utca",
+    "distance_km": 5.89,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.829343318939213,
+          47.65354352757998
+        ],
+        "mappedPosition": [
+          18.8293351,
+          47.6535487
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Pilisvörösvár": {
+    "from": "Margit utca",
+    "to": "Pilisvörösvár",
+    "distance_km": 0.51,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.88837337493897,
+          47.630534688285714
+        ],
+        "mappedPosition": [
+          18.8884533,
+          47.6305008
+        ],
+        "snapDistance": 7,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Pilisvörösvár_Margit utca": {
+    "from": "Pilisvörösvár",
+    "to": "Margit utca",
+    "distance_km": 0.51,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.88837337493897,
+          47.630534688285714
+        ],
+        "mappedPosition": [
+          18.8884533,
+          47.6305008
+        ],
+        "snapDistance": 7,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Pilisjászfalu": {
+    "from": "Margit utca",
+    "to": "Pilisjászfalu",
+    "distance_km": 8.468,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.799586892127994,
+          47.660347373232376
+        ],
+        "mappedPosition": [
+          18.799574,
+          47.6603558
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Pilisjászfalu_Margit utca": {
+    "from": "Pilisjászfalu",
+    "to": "Margit utca",
+    "distance_km": 8.468,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.799586892127994,
+          47.660347373232376
+        ],
+        "mappedPosition": [
+          18.799574,
+          47.6603558
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Nagy-Somlyó": {
+    "from": "Margit utca",
+    "to": "Nagy-Somlyó",
+    "distance_km": 8.244,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.805493116378788,
+          47.659227310909
+        ],
+        "mappedPosition": [
+          18.8054939,
+          47.6592243
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Nagy-Somlyó_Margit utca": {
+    "from": "Nagy-Somlyó",
+    "to": "Margit utca",
+    "distance_km": 8.244,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.805493116378788,
+          47.659227310909
+        ],
+        "mappedPosition": [
+          18.8054939,
+          47.6592243
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Bányaudvar": {
+    "from": "Margit utca",
+    "to": "Bányaudvar",
+    "distance_km": 8.455,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.803897202014927,
+          47.660472301017535
+        ],
+        "mappedPosition": [
+          18.8039038,
+          47.6604707
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Bányaudvar_Margit utca": {
+    "from": "Bányaudvar",
+    "to": "Margit utca",
+    "distance_km": 8.455,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.803897202014927,
+          47.660472301017535
+        ],
+        "mappedPosition": [
+          18.8039038,
+          47.6604707
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Harangvirág út": {
+    "from": "Margit utca",
+    "to": "Harangvirág út",
+    "distance_km": 8.981,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.80046129226685,
+          47.66441438470421
+        ],
+        "mappedPosition": [
+          18.8004633,
+          47.6644154
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Harangvirág út_Margit utca": {
+    "from": "Harangvirág út",
+    "to": "Margit utca",
+    "distance_km": 8.981,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.80046129226685,
+          47.66441438470421
+        ],
+        "mappedPosition": [
+          18.8004633,
+          47.6644154
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Tinnyei út": {
+    "from": "Margit utca",
+    "to": "Tinnyei út",
+    "distance_km": 9.057,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.8050988316536,
+          47.66838764550879
+        ],
+        "mappedPosition": [
+          18.8050986,
+          47.66839
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Tinnyei út_Margit utca": {
+    "from": "Tinnyei út",
+    "to": "Margit utca",
+    "distance_km": 9.057,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.8050988316536,
+          47.66838764550879
+        ],
+        "mappedPosition": [
+          18.8050986,
+          47.66839
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Szőlő sor": {
+    "from": "Margit utca",
+    "to": "Szőlő sor",
+    "distance_km": 8.486,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.80993485450745,
+          47.67226263819827
+        ],
+        "mappedPosition": [
+          18.8099495,
+          47.6722434
+        ],
+        "snapDistance": 2,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Szőlő sor_Margit utca": {
+    "from": "Szőlő sor",
+    "to": "Margit utca",
+    "distance_km": 8.486,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.80993485450745,
+          47.67226263819827
+        ],
+        "mappedPosition": [
+          18.8099495,
+          47.6722434
+        ],
+        "snapDistance": 2,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Csévi temető": {
+    "from": "Margit utca",
+    "to": "Csévi temető",
+    "distance_km": 7.829,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.81664037704468,
+          47.668619587540654
+        ],
+        "mappedPosition": [
+          18.8166509,
+          47.668626
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Csévi temető_Margit utca": {
+    "from": "Csévi temető",
+    "to": "Margit utca",
+    "distance_km": 7.829,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.81664037704468,
+          47.668619587540654
+        ],
+        "mappedPosition": [
+          18.8166509,
+          47.668626
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Piliscsév": {
+    "from": "Margit utca",
+    "to": "Piliscsév",
+    "distance_km": 8.246,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.818582296371464,
+          47.67365048862443
+        ],
+        "mappedPosition": [
+          18.8185464,
+          47.6736286
+        ],
+        "snapDistance": 3,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Piliscsév_Margit utca": {
+    "from": "Piliscsév",
+    "to": "Margit utca",
+    "distance_km": 8.246,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.818582296371464,
+          47.67365048862443
+        ],
+        "mappedPosition": [
+          18.8185464,
+          47.6736286
+        ],
+        "snapDistance": 3,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Lőrinc-nyereg": {
+    "from": "Margit utca",
+    "to": "Lőrinc-nyereg",
+    "distance_km": 7.795,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.811367154121402,
+          47.66163989129076
+        ],
+        "mappedPosition": [
+          18.8113688,
+          47.6616384
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Lőrinc-nyereg_Margit utca": {
+    "from": "Lőrinc-nyereg",
+    "to": "Margit utca",
+    "distance_km": 7.795,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.811367154121402,
+          47.66163989129076
+        ],
+        "mappedPosition": [
+          18.8113688,
+          47.6616384
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Ferenc-forrás": {
+    "from": "Margit utca",
+    "to": "Ferenc-forrás",
+    "distance_km": 6.27,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.81782323122025,
+          47.65016091922408
+        ],
+        "mappedPosition": [
+          18.8178367,
+          47.6501599
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Ferenc-forrás_Margit utca": {
+    "from": "Ferenc-forrás",
+    "to": "Margit utca",
+    "distance_km": 6.27,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.81782323122025,
+          47.65016091922408
+        ],
+        "mappedPosition": [
+          18.8178367,
+          47.6501599
+        ],
+        "snapDistance": 1,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Tinnye-hegy": {
+    "from": "Margit utca",
+    "to": "Tinnye-hegy",
+    "distance_km": 7.181,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.815720379352573,
+          47.65873592615439
+        ],
+        "mappedPosition": [
+          18.8157167,
+          47.6587343
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Tinnye-hegy_Margit utca": {
+    "from": "Tinnye-hegy",
+    "to": "Margit utca",
+    "distance_km": 7.181,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.815720379352573,
+          47.65873592615439
+        ],
+        "mappedPosition": [
+          18.8157167,
+          47.6587343
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Őr-hegy": {
+    "from": "Margit utca",
+    "to": "Őr-hegy",
+    "distance_km": 1.117,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.881649076938633,
+          47.6240699914852
+        ],
+        "mappedPosition": [
+          18.881653,
+          47.6240712
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Őr-hegy_Margit utca": {
+    "from": "Őr-hegy",
+    "to": "Margit utca",
+    "distance_km": 1.117,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.881649076938633,
+          47.6240699914852
+        ],
+        "mappedPosition": [
+          18.881653,
+          47.6240712
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Iluska-sztráda": {
+    "from": "Margit utca",
+    "to": "Iluska-sztráda",
+    "distance_km": 1.972,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.870407938957218,
+          47.63862467224277
+        ],
+        "mappedPosition": [
+          18.8704151,
+          47.6386304
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Iluska-sztráda_Margit utca": {
+    "from": "Iluska-sztráda",
+    "to": "Margit utca",
+    "distance_km": 1.972,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.870407938957218,
+          47.63862467224277
+        ],
+        "mappedPosition": [
+          18.8704151,
+          47.6386304
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Sólyom-szikla": {
+    "from": "Margit utca",
+    "to": "Sólyom-szikla",
+    "distance_km": 1.013,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.875528275966648,
+          47.63202024346056
+        ],
+        "mappedPosition": [
+          18.8749516,
+          47.6317902
+        ],
+        "snapDistance": 50,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Sólyom-szikla_Margit utca": {
+    "from": "Sólyom-szikla",
+    "to": "Margit utca",
+    "distance_km": 1.013,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.875528275966648,
+          47.63202024346056
+        ],
+        "mappedPosition": [
+          18.8749516,
+          47.6317902
+        ],
+        "snapDistance": 50,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Kopár-csárda": {
+    "from": "Margit utca",
+    "to": "Kopár-csárda",
+    "distance_km": 2.637,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.866440951824192,
+          47.62207218082063
+        ],
+        "mappedPosition": [
+          18.8664445,
+          47.6220732
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Kopár-csárda_Margit utca": {
+    "from": "Kopár-csárda",
+    "to": "Margit utca",
+    "distance_km": 2.637,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.866440951824192,
+          47.62207218082063
+        ],
+        "mappedPosition": [
+          18.8664445,
+          47.6220732
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Gázmáneum": {
+    "from": "Margit utca",
+    "to": "Gázmáneum",
+    "distance_km": 2.547,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.855414390563965,
+          47.62867648602552
+        ],
+        "mappedPosition": [
+          18.8554132,
+          47.6286846
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Gázmáneum_Margit utca": {
+    "from": "Gázmáneum",
+    "to": "Margit utca",
+    "distance_km": 2.547,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.855414390563965,
+          47.62867648602552
+        ],
+        "mappedPosition": [
+          18.8554132,
+          47.6286846
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Jenői fasor": {
+    "from": "Margit utca",
+    "to": "Jenői fasor",
+    "distance_km": 0.898,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.885492682456974,
+          47.63382051768726
+        ],
+        "mappedPosition": [
+          18.8854978,
+          47.6338182
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Jenői fasor_Margit utca": {
+    "from": "Jenői fasor",
+    "to": "Margit utca",
+    "distance_km": 0.898,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.885492682456974,
+          47.63382051768726
+        ],
+        "mappedPosition": [
+          18.8854978,
+          47.6338182
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Saint-Gobain kilátó": {
+    "from": "Margit utca",
+    "to": "Saint-Gobain kilátó",
+    "distance_km": 1.112,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.87797445058823,
+          47.62776509254425
+        ],
+        "mappedPosition": [
+          18.8779789,
+          47.6277644
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Saint-Gobain kilátó_Margit utca": {
+    "from": "Saint-Gobain kilátó",
+    "to": "Margit utca",
+    "distance_km": 1.112,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.87797445058823,
+          47.62776509254425
+        ],
+        "mappedPosition": [
+          18.8779789,
+          47.6277644
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Margit utca_Északkeleti átjáró": {
+    "from": "Margit utca",
+    "to": "Északkeleti átjáró",
+    "distance_km": 1.423,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.86813342571259,
+          47.6275839302682
+        ],
+        "mappedPosition": [
+          18.8681424,
+          47.6275888
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
+  "Északkeleti átjáró_Margit utca": {
+    "from": "Északkeleti átjáró",
+    "to": "Margit utca",
+    "distance_km": 1.423,
+    "raw": [
+      {
+        "originalPosition": [
+          18.88567,
+          47.628149
+        ],
+        "mappedPosition": [
+          18.8856775,
+          47.6281518
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      },
+      {
+        "originalPosition": [
+          18.86813342571259,
+          47.6275839302682
+        ],
+        "mappedPosition": [
+          18.8681424,
+          47.6275888
+        ],
+        "snapDistance": 0,
+        "restricted": false,
+        "restrictionType": null
+      }
+    ]
+  },
   "Kisgulya_Száz éves fenyő": {
     "from": "Kisgulya",
     "to": "Száz éves fenyő",

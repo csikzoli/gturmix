@@ -7,6 +7,8 @@ from itertools import combinations
 import requests
 from dotenv import load_dotenv
 
+import db
+
 load_dotenv()
 
 API_KEY = os.getenv("MAPY_API_KEY")
@@ -49,7 +51,8 @@ POINTS = {
     "Gázmáneum": (18.855414390563965, 47.62867648602552),
     "Jenői fasor": (18.885492682456974, 47.63382051768726),
     "Saint-Gobain kilátó": (18.87797445058823, 47.62776509254425),
-    "Északkeleti átjáró": (18.86813342571259, 47.6275839302682)
+    "Északkeleti átjáró": (18.86813342571259, 47.6275839302682),
+    "Margit utca": (18.88567, 47.628149)
 }
 
 
@@ -73,11 +76,13 @@ def plan_route(start: tuple, end: tuple) -> dict:
 def farthest_from(name: str, results: dict) -> dict | None:
     candidates = [
         entry for entry in results.values()
-        if entry.get("from") == name and "error" not in entry
+        if entry.get("from") == name and "error" not in entry and entry.get("status") == "L"
     ]
-    if not candidates:
-        return None
-    return max(candidates, key=lambda e: e["distance_km"])
+    if candidates:
+        return max(candidates, key=lambda e: e["distance_km"])
+    else:
+        db.record_visit(name, "Csemetekert")
+        return results.get(f"{name}_Csemetekert")
 
 
 def route_info(a: str, b: str, results: dict) -> dict | None:
@@ -85,20 +90,29 @@ def route_info(a: str, b: str, results: dict) -> dict | None:
     if a_to_b is None or "error" in a_to_b:
         return None
     farthest = farthest_from(b, results)
+    candidates = [
+        e for e in results.values()
+        if e.get("from") == b and "error" not in e and e.get("status") == "L"
+    ]
+    b_avg_km = round(sum(e["distance_km"] for e in candidates) / len(candidates), 2) if candidates else None
+    dist = a_to_b["distance_km"]
     info = {
-        "a_to_b_km": round(a_to_b["distance_km"], 2),
+        "a_to_b_km": round(dist, 2),
         "b_farthest_name": farthest["to"] if farthest else None,
         "b_farthest_km": round(farthest["distance_km"], 2) if farthest else None,
+        "b_avg_km": b_avg_km,
+        "total_km": round(dist + farthest["distance_km"] if farthest else 0, 2),
     }
     print(f"{a} → {b}: {info['a_to_b_km']} km")
     if info["b_farthest_name"]:
-        print(f"{b} -tól/től legtávolabb: {info['b_farthest_name']} ({info['b_farthest_km']} km)")
+        print(f"{b} legtávolabb: {info['b_farthest_name']} ({info['b_farthest_km']} km), átlag: {b_avg_km} km")
     return info
 
 
 def data_from_mapy():
     names = list(POINTS.keys())
     unique_pairs = list(combinations(names, 2))
+    # unique_pairs = [("Margit utca", x) for x in names if x != "Margit utca"]
     total = len(names) * (len(names) - 1)
 
     print(f"Pontok száma: {len(names)}, API hívások: {len(unique_pairs)}, tárolt útvonalak: {total}")
@@ -134,11 +148,30 @@ def data_from_mapy():
     # print(f"eredmény: \n{results}")
 
     output_file = "routes.json"
+    # output_file = "routes-m.json"
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"\nMind a(z) {len(results)} útvonal mentve: {output_file}")
 
+def import_from_json(json_path: str = "routes.json"):
+    with open(json_path, encoding="utf-8") as f:
+        data = json.load(f)
+    db.init_db()
+    count = 0
+    for entry in data.values():
+        if "error" in entry:
+            continue
+        rp = entry.get("raw") or []
+        from_pos = ",".join(str(c) for c in rp[0]["originalPosition"]) if len(rp) > 0 else None
+        to_pos = ",".join(str(c) for c in rp[1]["originalPosition"]) if len(rp) > 1 else None
+        db.insert_route_single(entry["from"], entry["to"], entry["distance_km"], from_pos, to_pos)
+        count += 1
+    print(f"{count} bejegyzés importálva → routes.db")
+    db.set_faraway()
+
+
 def main():
+    data_from_mapy()
     with open("routes.json", encoding="utf-8") as f:
         results = json.load(f)
         route_info("Kisgulya", "Fenyősor", results)
