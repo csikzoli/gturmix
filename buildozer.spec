@@ -9,7 +9,7 @@ source.main = kivy_app.py
 
 version = 1.0
 
-requirements = python3,kivy,sqlite3
+requirements = python3,kivy,sqlite3,requests,python-dotenv
 
 orientation = portrait
 fullscreen = 0
