@@ -38,6 +38,12 @@ jobs:
             libffi-dev \
             libssl-dev
 
+      - name: Set JAVA_HOME to JDK 17
+        run: |
+          echo "JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))" >> $GITHUB_ENV
+          echo "$JAVA_HOME/bin" >> $GITHUB_PATH
+          java -version
+
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
 
