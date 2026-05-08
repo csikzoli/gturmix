@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install system dependencies
+      - name: Install system packages
         run: |
           sudo apt update
           sudo apt install -y \
@@ -28,7 +28,6 @@ jobs:
             zip \
             unzip \
             openjdk-17-jdk \
-            python3-pip \
             autoconf \
             libtool \
             pkg-config \
@@ -39,21 +38,29 @@ jobs:
             libffi-dev \
             libssl-dev
 
-      - name: Install Buildozer
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Accept Android licenses
+        run: yes | sdkmanager --licenses
+
+      - name: Install Android build tools
+        run: |
+          sdkmanager \
+            "platform-tools" \
+            "platforms;android-33" \
+            "build-tools;33.0.2"
+
+      - name: Install Python dependencies
         run: |
           pip install --upgrade pip
           pip install buildozer cython
-
-      - name: Accept Android licenses
-        run: |
-          mkdir -p ~/.android
-          touch ~/.android/repositories.cfg
 
       - name: Build APK
         run: |
           buildozer android debug
 
-      - name: Upload APK artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: kivy-apk
