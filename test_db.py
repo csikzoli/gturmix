@@ -20,7 +20,7 @@ def insert(from_p, to_p, dist=1.0, status="L", seq=0):
 def get_row(name):
     with db.get_connection() as conn:
         return conn.execute(
-            "SELECT status, sequence_number FROM routes WHERE name = ?", (name,)
+            "SELECT status, sequence_number, runner FROM routes WHERE name = ?", (name,)
         ).fetchone()
 
 
@@ -78,7 +78,7 @@ def test_get_available_destinations_ignores_other_from_points():
 def test_record_visit_sets_ab_to_V():
     insert("A", "B")
     db.record_visit("A", "B")
-    status, _ = get_row("A_B")
+    status, _, _ = get_row("A_B")
     assert status == "V"
 
 
@@ -86,7 +86,7 @@ def test_record_visit_increments_sequence_number():
     insert("A", "B", seq=0)
     insert("X", "Y", seq=5)
     db.record_visit("A", "B")
-    _, seq = get_row("A_B")
+    _, seq, _ = get_row("A_B")
     assert seq == 6
 
 
@@ -94,7 +94,7 @@ def test_record_visit_sets_ba_to_N():
     insert("A", "B")
     insert("B", "A")
     db.record_visit("A", "B")
-    status, _ = get_row("B_A")
+    status, _, _ = get_row("B_A")
     assert status == "N"
 
 
@@ -113,8 +113,32 @@ def test_record_visit_does_not_affect_unrelated_records():
     insert("A", "B")
     insert("X", "Y")
     db.record_visit("A", "B")
-    status, _ = get_row("X_Y")
+    status, _, _ = get_row("X_Y")
     assert status == "L"
+
+
+def test_record_visit_sets_runner():
+    insert("A", "B")
+    db.record_visit("A", "B", runner="Anna")
+    _, _, runner = get_row("A_B")
+    assert runner == "Anna"
+
+
+def test_record_visit_runner_defaults_to_null_when_no_previous():
+    insert("A", "B")
+    db.record_visit("A", "B")
+    _, _, runner = get_row("A_B")
+    assert runner is None
+
+
+def test_record_visit_inherits_runner_from_last_visited():
+    insert("A", "B", seq=3, status="V")
+    with db.get_connection() as conn:
+        conn.execute("UPDATE routes SET runner = 'Zoli' WHERE name = 'A_B'")
+    insert("B", "C")
+    db.record_visit("B", "C")
+    _, _, runner = get_row("B_C")
+    assert runner == "Zoli"
 
 
 # --- clear_routes ---

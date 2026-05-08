@@ -100,6 +100,14 @@
                 {% endfor %}
             </select>
         </label>
+                <label>Futó:
+            <select name="runner">
+                <option value="">-- válassz --</option>
+                {% for r in runners %}
+                <option value="{{ r }}"{% if r == runner %} selected{% endif %}>{{ r }}</option>
+                {% endfor %}
+            </select>
+        </label>
         <button type="submit">Lássuk</button>
     </form>
     {% endif %}
@@ -121,11 +129,21 @@
         <h2>Eddig:</h2>
         <ol>
             {% for r in visited %}
-            <li class="fw-{{ r.faraway }}">{{ r.name }}:   {{ r.distance_km }} km</li>
+            <li class="fw-{{ r.faraway }}">{{ r.name }}: {{ r.distance_km }} km{% if r.runner %} — {{ r.runner }}{% endif %}</li>
             {% endfor %}
         </ol>
         <p class="route-total"><strong>Összesen: {{ visited_total }} km</strong></p>
     </div>
+    {% if runner_totals %}
+    <div class="route-log" style="margin-top:16px;">
+        <h2>Futók összesítője:</h2>
+        <ul style="margin:0 0 4px;padding-left:20px;">
+            {% for name, km in runner_totals.items() %}
+            <li style="margin:4px 0;font-size:0.95rem;">{{ name }}: {{ km }} km</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
     {% endif %}
 
 

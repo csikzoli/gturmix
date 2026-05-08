@@ -22,7 +22,8 @@ def init_db():
                 toOriginalPosition   TEXT,
                 sequence_number      INTEGER NOT NULL DEFAULT 0,
                 status               TEXT    NOT NULL DEFAULT 'L',
-                faraway              TEXT
+                faraway              TEXT,
+                runner               TEXT
             )
         """)
     print(f"db kész")
@@ -70,25 +71,33 @@ def get_visited_route() -> list[dict]:
     try:
         with get_connection() as conn:
             rows = conn.execute(
-                "SELECT name, distance_km, faraway FROM routes"
+                "SELECT name, distance_km, faraway, runner FROM routes"
                 " WHERE sequence_number > 0 ORDER BY sequence_number",
             ).fetchall()
-        return [{"name": row[0], "distance_km": round(row[1], 2), "faraway": row[2]} for row in rows]
+        return [{"name": row[0], "distance_km": round(row[1], 2), "faraway": row[2], "runner": row[3]} for row in rows]
     except Exception:
         return []
 
 
-def record_visit(a: str, b: str):
+def record_visit(a: str, b: str, runner: str = None):
     with get_connection() as conn:
+        if runner is None:
+            row = conn.execute(
+                "SELECT runner FROM routes"
+                " WHERE sequence_number = (SELECT MAX(sequence_number) FROM routes)"
+            ).fetchone()
+            if row:
+                runner = row[0]
         conn.execute(
             "UPDATE routes SET status = 'N' WHERE from_point = ? OR to_point = ?",
             (a, a),
         )
         conn.execute(
             "UPDATE routes SET status = 'V',"
-            " sequence_number = (SELECT COALESCE(MAX(sequence_number), 0) + 1 FROM routes)"
+            " sequence_number = (SELECT COALESCE(MAX(sequence_number), 0) + 1 FROM routes),"
+            " runner = ?"
             " WHERE name = ?",
-            (f"{a}_{b}",),
+            (runner, f"{a}_{b}"),
         )
 
 

@@ -5,6 +5,8 @@ from main import POINTS, import_from_json, route_info
 
 app = Flask(__name__)
 
+RUNNERS = ["Anna", "Ádám", "Balázs", "Zoli"]
+
 try:
     results = db.load_results()
 except Exception:
@@ -15,6 +17,7 @@ except Exception:
 def index():
     a = request.args.get("a") or db.get_current_point()
     b = request.args.get("b", "")
+    runner = request.args.get("runner", "")
 
     info = None
     error = None
@@ -25,7 +28,7 @@ def index():
         elif not results:
             error = "A routes.json nem található — futtasd először a data_from_mapy() függvényt."
         else:
-            db.record_visit(a, b)
+            db.record_visit(a, b, runner or None)
             fresh_results = db.load_results()
             info = route_info(a, b, fresh_results)
             if info is None:
@@ -36,8 +39,15 @@ def index():
 
     game_over = info is not None and info["b_farthest_name"] == "Csemetekert"
     visited = db.get_visited_route()
+    runner_totals = {}
+    for r in visited:
+        if r["runner"]:
+            runner_totals[r["runner"]] = round(runner_totals.get(r["runner"], 0.0) + r["distance_km"], 2)
+
     return render_template(
         "index.html",
+        runners=RUNNERS,
+        runner=runner,
         points=list(POINTS.keys()),
         destinations=db.get_available_destinations(a),
         a=a,
@@ -48,6 +58,7 @@ def index():
         game_over=game_over,
         visited=visited,
         visited_total=round(sum(r["distance_km"] for r in visited), 2),
+        runner_totals=runner_totals,
     )
 
 
