@@ -51,6 +51,10 @@ jobs:
           mkdir -p ~/.buildozer/android/platform/
           ln -sf $ANDROID_HOME ~/.buildozer/android/platform/android-sdk
           ln -sf $ANDROID_HOME/ndk/25.2.9519653 ~/.buildozer/android/platform/android-ndk-r25b
+          # Buildozer uses old tools/bin/sdkmanager path; modern SDK has it in cmdline-tools
+          mkdir -p $ANDROID_HOME/tools/bin
+          ln -sf $ANDROID_HOME/cmdline-tools/16.0/bin/sdkmanager $ANDROID_HOME/tools/bin/sdkmanager
+          ln -sf $ANDROID_HOME/cmdline-tools/16.0/bin/avdmanager  $ANDROID_HOME/tools/bin/avdmanager
 
       - name: Build APK
         run: buildozer -v android debug
