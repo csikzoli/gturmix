@@ -192,23 +192,19 @@ class GulyaturmixApp(App):
         if platform == "android":
             data_dir = self.user_data_dir
             db.DB_PATH = os.path.join(data_dir, "routes.db")
+            src = os.path.join(os.path.dirname(__file__), "routes.json")
+            dst = os.path.join(data_dir, "routes.json")
+            if os.path.exists(src):
+                shutil.copy(src, dst)
+            db.clear_routes()
             db.init_db()
-            with db.get_connection() as conn:
-                count = conn.execute("SELECT COUNT(*) FROM routes").fetchone()[0]
-            if count == 0:
-                src = os.path.join(os.path.dirname(__file__), "routes.json")
-                dst = os.path.join(data_dir, "routes.json")
-                if os.path.exists(src):
-                    shutil.copy(src, dst)
-                import_from_json(dst)
+            import_from_json(dst)
         else:
+            src = os.path.join(os.path.dirname(__file__), "routes.json")
+            db.clear_routes()
             db.init_db()
-            with db.get_connection() as conn:
-                count = conn.execute("SELECT COUNT(*) FROM routes").fetchone()[0]
-            if count == 0:
-                src = os.path.join(os.path.dirname(__file__), "routes.json")
-                if os.path.exists(src):
-                    import_from_json(src)
+            if os.path.exists(src):
+                import_from_json(src)
 
     def _destinations(self, from_point):
         dests = db.get_available_destinations(from_point)

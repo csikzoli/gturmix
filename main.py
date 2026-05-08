@@ -4,14 +4,8 @@ import sys
 import time
 from itertools import combinations
 
-import requests
-from dotenv import load_dotenv
-
 import db
 
-load_dotenv()
-
-API_KEY = os.getenv("MAPY_API_KEY")
 API_URL = "https://api.mapy.cz/v1/routing/route"
 
 ROUTE_TYPE = "foot_fast"
@@ -57,12 +51,16 @@ POINTS = {
 
 
 def plan_route(start: tuple, end: tuple) -> dict:
-    if not API_KEY or API_KEY == "ide_ird_az_api_kulcsodat":
+    import requests
+    from dotenv import load_dotenv
+    load_dotenv()
+    api_key = os.getenv("MAPY_API_KEY")
+    if not api_key or api_key == "ide_ird_az_api_kulcsodat":
         print("Hiba: Adj meg érvényes MAPY_API_KEY értéket a .env fájlban.")
         sys.exit(1)
 
     params = {
-        "apikey": API_KEY,
+        "apikey": api_key,
         "start": f"{start[0]},{start[1]}",
         "end": f"{end[0]},{end[1]}",
         "routeType": ROUTE_TYPE,
