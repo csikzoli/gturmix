@@ -46,13 +46,13 @@ jobs:
             "build-tools;34.0.0" \
             "ndk;25.2.9519653"
 
+      - name: Link SDK to Buildozer path
+        run: |
+          mkdir -p ~/.buildozer/android/platform/
+          ln -sf $ANDROID_HOME ~/.buildozer/android/platform/android-sdk
+          ln -sf $ANDROID_HOME/ndk/25.2.9519653 ~/.buildozer/android/platform/android-ndk-r25b
+
       - name: Build APK
-        env:
-          ANDROIDSDK: ${{ env.ANDROID_HOME }}
-          ANDROIDNDK: ${{ env.ANDROID_HOME }}/ndk/25.2.9519653
-          ANDROIDNDKVER: "25b"
-          ANDROIDAPI: "33"
-          ANDROIDMINAPI: "21"
         run: buildozer -v android debug
 
       - uses: actions/upload-artifact@v4
