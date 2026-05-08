@@ -1,30 +1,23 @@
-import json
-import os
+from flask import Flask, redirect, render_template, request, url_for
 
-from flask import Flask, render_template, request
-
-from main import POINTS, route_info
+import db
+from main import POINTS, import_from_json, route_info
 
 app = Flask(__name__)
 
-_BASE = os.path.dirname(os.path.abspath(__file__))
-
 try:
-    with open(os.path.join(_BASE, "routes.json"), encoding="utf-8") as f:
-        results = json.load(f)
-except FileNotFoundError:
+    results = db.load_results()
+except Exception:
     results = {}
 
 
 @app.route("/")
 def index():
-    a = request.args.get("a", "")
+    a = request.args.get("a") or db.get_current_point()
     b = request.args.get("b", "")
 
     info = None
     error = None
-
-    # TODO ahová most megyek illetve ahol már volt a csapat, az ne legyen benne
 
     if a and b:
         if a == b:
@@ -32,18 +25,40 @@ def index():
         elif not results:
             error = "A routes.json nem található — futtasd először a data_from_mapy() függvényt."
         else:
-            info = route_info(a, b, results)
+            db.record_visit(a, b)
+            fresh_results = db.load_results()
+            info = route_info(a, b, fresh_results)
             if info is None:
                 error = f"Nem található útvonal: {a} → {b}"
+            else:
+                from_label = a
+                a = b
 
+    game_over = info is not None and info["b_farthest_name"] == "Csemetekert"
+    visited = db.get_visited_route()
     return render_template(
         "index.html",
         points=list(POINTS.keys()),
+        destinations=db.get_available_destinations(a),
         a=a,
         b=b,
+        from_label=locals().get("from_label", a),
         info=info,
         error=error,
+        game_over=game_over,
+        visited=visited,
+        visited_total=round(sum(r["distance_km"] for r in visited), 2),
     )
+
+
+@app.route("/reset", methods=["GET"])
+def reset():
+    db.clear_routes()
+    db.init_db()
+    import_from_json()
+    global results
+    results = db.load_results()
+    return redirect(url_for("index"))
 
 
 if __name__ == "__main__":
