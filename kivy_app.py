@@ -112,19 +112,20 @@ class GulyaturmixApp(App):
     def build(self):
         Window.clearcolor = BG
         try:
-            self._init_data()
+            return self._build_ui()
         except Exception:
             import traceback
-            scroll = ScrollView()
-            lbl = Label(
-                text=f"Indítási hiba:\n{traceback.format_exc()}",
-                color=(1, 0.3, 0.3, 1), halign="left", valign="top",
-                size_hint=(1, None),
-            )
-            lbl.bind(size=lambda *_: setattr(lbl, "text_size", lbl.size))
-            lbl.bind(texture_size=lambda *_: setattr(lbl, "height", lbl.texture_size[1]))
-            scroll.add_widget(lbl)
-            return scroll
+            msg = traceback.format_exc()
+            try:
+                crash_path = os.path.join(self.user_data_dir, "crash.log")
+                with open(crash_path, "w") as f:
+                    f.write(msg)
+            except Exception:
+                pass
+            return Label(text=msg, color=(1, 0.3, 0.3, 1), halign="left", valign="top")
+
+    def _build_ui(self):
+        self._init_data()
 
         scroll = ScrollView()
         root = BoxLayout(orientation="vertical", padding=[14, 18, 14, 14],
