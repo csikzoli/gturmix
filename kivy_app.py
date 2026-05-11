@@ -11,8 +11,17 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.graphics import Color, RoundedRectangle
 
-import db
-from main import POINTS, import_from_json, route_info
+_import_error = None
+try:
+    import db
+    from main import POINTS, import_from_json, route_info
+except Exception:
+    import traceback as _tb
+    _import_error = _tb.format_exc()
+    POINTS = {}
+    db = None  # type: ignore
+    import_from_json = None  # type: ignore
+    route_info = None  # type: ignore
 
 RUNNERS = ["Anna", "Ádám", "Balázs", "Zoli"]
 PLACEHOLDER = "-- válassz --"
@@ -125,6 +134,8 @@ class GulyaturmixApp(App):
             return Label(text=msg, color=(1, 0.3, 0.3, 1), halign="left", valign="top")
 
     def _build_ui(self):
+        if _import_error:
+            raise RuntimeError(_import_error)
         self._init_data()
 
         scroll = ScrollView()
