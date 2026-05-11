@@ -54,7 +54,7 @@ def main(page: ft.Page):
     page.title = "Gulyaturmix"
     page.bgcolor = BG
     page.theme_mode = ft.ThemeMode.DARK
-    page.padding = ft.padding.all(14)
+    page.padding = 14
     page.scroll = ft.ScrollMode.AUTO
 
     _init_data()
@@ -187,7 +187,7 @@ def main(page: ft.Page):
             style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=14)),
             height=54, expand=True,
         )]),
-        ft.Container(content=result_text, padding=ft.padding.symmetric(vertical=8)),
+        ft.Container(content=result_text, padding=8),
         ft.Container(content=log_col, bgcolor=CARD, border_radius=12, padding=14),
         ft.Container(height=8),
         ft.Row([ft.ElevatedButton(
