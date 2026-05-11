@@ -1,4 +1,4 @@
-name: Build Kivy APK
+name: Build Flet APK
 
 on:
   push:
@@ -14,52 +14,37 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
 
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            git zip unzip build-essential \
-            autoconf libtool pkg-config \
-            zlib1g-dev libncurses5-dev libncursesw5-dev \
-            cmake libffi-dev libssl-dev
-
-      - name: Install Buildozer
-        run: |
-          pip install --upgrade pip
-          pip install buildozer==1.5.0 cython==0.29.36
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.24.5"
+          channel: stable
 
       - uses: android-actions/setup-android@v3
 
-      - name: Install SDK components + accept licenses
+      - name: Accept Android licenses
+        run: yes | sdkmanager --licenses
+
+      - name: Install SDK components
         run: |
-          yes | sdkmanager --licenses
           sdkmanager \
             "platform-tools" \
             "platforms;android-33" \
-            "build-tools;34.0.0" \
-            "ndk;25.2.9519653"
+            "build-tools;34.0.0"
 
-      - name: Link SDK to Buildozer path
-        run: |
-          mkdir -p ~/.buildozer/android/platform/
-          ln -sf $ANDROID_HOME ~/.buildozer/android/platform/android-sdk
-          ln -sf $ANDROID_HOME/ndk/25.2.9519653 ~/.buildozer/android/platform/android-ndk-r25b
-          # Buildozer uses old tools/bin/sdkmanager path; modern SDK has it in cmdline-tools
-          mkdir -p $ANDROID_HOME/tools/bin
-          ln -sf $ANDROID_HOME/cmdline-tools/16.0/bin/sdkmanager $ANDROID_HOME/tools/bin/sdkmanager
-          ln -sf $ANDROID_HOME/cmdline-tools/16.0/bin/avdmanager  $ANDROID_HOME/tools/bin/avdmanager
+      - name: Install Flet
+        run: pip install flet
 
       - name: Build APK
-        run: buildozer -v android debug
+        run: flet build apk --project gulyaturmix --org org.gulyaturmix --module-name flet_app
 
       - uses: actions/upload-artifact@v4
         with:
-          name: gulyaturmix-debug
-          path: bin/*.apk
+          name: gulyaturmix-flet
+          path: build/apk/*.apk
